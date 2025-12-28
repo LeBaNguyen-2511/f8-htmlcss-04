@@ -18,6 +18,84 @@ body {
 }
 
 /* ------------------------ Common ------------------------ */
+.tab {
+    position: relative;
+    display: flex;
+    column-gap: 56px;
+}
+
+.tab__more::after,
+.tab__item--active::after,
+.tab::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--primary-color);
+    opacity: 0.07;
+}
+
+.tab__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 11px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.tab__item--active::after {
+    width: 95px;
+    opacity: 1;
+}
+
+.tab__icon {
+    height: 20px;
+}
+
+.tab__title {
+    color: #48496a;
+    font-family: Sora, sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.tab__content {
+    display: none;
+}
+
+.tab__content:first-child {
+    display: block;
+}
+
+.tab__desc {
+    width: 391px;
+    margin: 36px 0 32px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1.715;
+}
+
+.tab__more {
+    position: relative;
+    padding-bottom: 5px;
+    color: #ff5d31;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.tab__more::after {
+    height: 1.5px;
+    background: #ff5d31;
+    opacity: 1;
+}
+
 .section-title {
     color: #5e6085;
     font-family: Sora;
@@ -492,4 +570,9 @@ h6 {
 .about__decor-img:nth-child(8) {
     bottom: -55px;
     right: -42px;
+}
+
+.about__desc-bottom {
+    width: 511px;
+    margin: 24px 0 52px;
 }
