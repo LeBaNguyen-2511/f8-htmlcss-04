@@ -15,6 +15,7 @@ body {
 :root {
     --primary-color: #ff5b2e;
     --secondary-color: #000958;
+    --sub-font: Sora, sans-serif;
 }
 
 /* ------------------------ Common ------------------------ */
@@ -59,7 +60,7 @@ body {
 
 .tab__title {
     color: #48496a;
-    font-family: Sora, sans-serif;
+    font-family: var(--sub-font);
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1;
@@ -98,14 +99,14 @@ body {
 
 .section-title {
     color: #5e6085;
-    font-family: Sora;
+    font-family: var(--sub-font);
     font-weight: 600;
     font-size: 1.6rem;
 }
 
 .section-heading {
     color: var(--secondary-color);
-    font-family: Sora;
+    font-family: var(--sub-font);
     font-weight: 700;
     font-size: 5.2rem;
     line-height: 1.192;
@@ -170,7 +171,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Sora", sans-serif;
+    font-family: var(--sub-font);
 }
 
 /* ------------------------ Header ------------------------ */
@@ -320,7 +321,7 @@ h6 {
 
 .hero-list__item-title {
     color: #181e52;
-    font-family: Sora;
+    font-family: var(--sub-font);
     font-weight: 600;
     font-size: 1.4rem;
 }
@@ -471,7 +472,7 @@ h6 {
 
 .about__card-data {
     color: #fff;
-    font-family: Sora;
+    font-family: var(--sub-font);
     font-weight: 700;
     font-size: 4.2rem;
 }
@@ -575,4 +576,61 @@ h6 {
 .about__desc-bottom {
     width: 511px;
     margin: 24px 0 52px;
+}
+
+/* ------------------------ Service ------------------------ */
+.service {
+    padding: 68px 0 100px;
+    margin-top: 130px;
+    background: #fff6ed;
+}
+
+.service__top {
+    text-align: center;
+}
+
+.service__heading {
+    margin-top: 15px;
+}
+
+.service__body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin-top: 71px;
+}
+
+.service__column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.service-item {
+    width: 294px;
+    padding: 28px;
+    border: 2px solid #ffbc7a42;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.service-item__heading {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.service-item__desc {
+    margin: 18px 0 24px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.service-item__more {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #34396a;
+    font-family: var(--sub-font);
+    font-size: 1.2rem;
 }
