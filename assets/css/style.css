@@ -596,6 +596,7 @@ h6 {
 .service__body {
     display: grid;
     grid-template-columns: auto 1fr auto;
+    column-gap: 71px;
     margin-top: 71px;
 }
 
@@ -614,9 +615,22 @@ h6 {
 }
 
 .service-item__heading {
+    position: relative;
+    padding-left: 12px;
     color: var(--secondary-color);
     font-weight: 600;
     font-size: 2.2rem;
+}
+
+.service-item__heading::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 2px;
+    height: 22px;
+    border-radius: 1px;
+    background: linear-gradient(180deg, #ff5b2e 0.39%, #ffa187 100.29%);
 }
 
 .service-item__desc {
@@ -633,4 +647,36 @@ h6 {
     color: #34396a;
     font-family: var(--sub-font);
     font-size: 1.2rem;
+}
+
+.service__media {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.service__img-wrapper {
+    position: relative;
+}
+
+.service__img-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 350px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.service__cta {
+    margin-top: 45px;
+    font-weight: 500;
 }
