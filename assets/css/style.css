@@ -140,6 +140,12 @@ body {
     color: var(--primary-color);
     line-height: var(--height);
     text-align: center;
+    transition: color .25s ease, background-color .25s ease;
+}
+
+.btn:hover {
+    color: #fff;
+    background: var(--primary-color);
 }
 
 .btn__primary {
