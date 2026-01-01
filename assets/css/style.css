@@ -138,9 +138,10 @@ body {
     border: 1px solid var(--primary-color);
     border-radius: 999px;
     color: var(--primary-color);
+    font-weight: 500;
     line-height: var(--height);
     text-align: center;
-    transition: color .25s ease, background-color .25s ease;
+    transition: color 0.25s ease, background-color 0.25s ease;
 }
 
 .btn:hover {
@@ -212,6 +213,8 @@ h6 {
     min-width: 117px;
     border-color: rgb(0, 9, 88, 0.7);
     color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .header__signup:hover {
@@ -595,6 +598,13 @@ h6 {
     text-align: center;
 }
 
+.service__desc {
+    color: #5e6085;
+    font-family: var(--sub-font);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
 .service__heading {
     margin-top: 15px;
 }
@@ -685,4 +695,100 @@ h6 {
 .service__cta {
     margin-top: 45px;
     font-weight: 500;
+}
+
+/* ------------------------ Staff ------------------------ */
+.staff {
+    padding: 130px 0;
+}
+
+.staff__top {
+    text-align: center;
+}
+
+.staff__desc {
+    color: #5e6085;
+    font-family: var(--sub-font);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.staff__heading {
+    margin-top: 15px;
+}
+
+.staff__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 35px;
+    margin-top: 45px;
+}
+
+.staff-item {
+    text-align: center;
+}
+
+.staff-item__img-wrapper {
+    position: relative;
+    height: 299px;
+    margin: 0 16px;
+    border-radius: 130px;
+    overflow: hidden;
+}
+
+.staff-item__img-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 266px;
+    border-radius: inherit;
+    background: var(
+        --bg-color,
+        linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%)
+    );
+}
+
+.staff-item__img-wrapper--second::after {
+    --bg-color: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+}
+
+.staff-item__img-wrapper--third::after {
+    --bg-color: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+}
+
+.staff-item__img-wrapper--fourth::after {
+    --bg-color: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
+}
+
+.staff-item__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.staff-item__title {
+    margin: 34px 0 14px;
+    color: #656689;
+    font-size: 1.4rem;
+}
+
+.staff-item__name {
+    color: var(--secondary-color);
+    font-family: var(--sub-font);
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.staff__cta-wrapper {
+    text-align: center;
+}
+
+.staff__cta {
+    min-width: 193px;
+    margin: 48px auto 0;
 }
