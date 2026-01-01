@@ -733,7 +733,30 @@ h6 {
     height: 299px;
     margin: 0 16px;
     border-radius: 130px;
-    overflow: hidden;
+}
+
+.staff-item__img-wrapper::before {
+    content: url(../img/staff/staff-decor-01.svg);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.staff-item__img-wrapper--second::before {
+    content: url(../img/staff/staff-decor-02.svg);
+    bottom: initial;
+    top: 33px;
+}
+
+.staff-item__img-wrapper--third::before {
+    content: url(../img/staff/staff-decor-03.svg);
+}
+
+.staff-item__img-wrapper--fourth::before {
+    content: url(../img/staff/staff-decor-04.svg);
+    bottom: initial;
+    top: 33px;
 }
 
 .staff-item__img-wrapper::after {
@@ -763,12 +786,17 @@ h6 {
     --bg-color: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
 }
 
+.staff-item__img-wrapper::after::before {
+    content: url(../img/staff/staff-decor-01.svg);
+}
+
 .staff-item__img {
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 1;
     width: 100%;
+    border-radius: inherit;
 }
 
 .staff-item__title {
