@@ -721,7 +721,7 @@ h6 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 35px;
-    margin-top: 45px;
+    margin-top: 59px;
 }
 
 .staff-item {
@@ -730,33 +730,42 @@ h6 {
 
 .staff-item__img-wrapper {
     position: relative;
-    height: 299px;
     margin: 0 16px;
     border-radius: 130px;
 }
 
 .staff-item__img-wrapper::before {
-    content: url(../img/staff/staff-decor-01.svg);
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: calc(100% + 33px);
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.staff-item__img-wrapper--first::before {
+    background-image: url(../img/staff/staff-decor-01.svg);
 }
 
 .staff-item__img-wrapper--second::before {
-    content: url(../img/staff/staff-decor-02.svg);
-    bottom: initial;
-    top: 33px;
+    background-image: url(../img/staff/staff-decor-02.svg);
 }
 
 .staff-item__img-wrapper--third::before {
-    content: url(../img/staff/staff-decor-03.svg);
+    background-image: url(../img/staff/staff-decor-03.svg);
 }
 
 .staff-item__img-wrapper--fourth::before {
-    content: url(../img/staff/staff-decor-04.svg);
-    bottom: initial;
-    top: 33px;
+    background-image: url(../img/staff/staff-decor-04.svg);
+}
+
+.staff-item__img-wrapper--fourth::before,
+.staff-item__img-wrapper--second::before {
+    background-position: 0 19px;
 }
 
 .staff-item__img-wrapper::after {
@@ -766,7 +775,7 @@ h6 {
     left: 0;
     right: 0;
     display: block;
-    height: 266px;
+    height: 93%;
     border-radius: inherit;
     background: var(
         --bg-color,
@@ -786,15 +795,10 @@ h6 {
     --bg-color: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
 }
 
-.staff-item__img-wrapper::after::before {
-    content: url(../img/staff/staff-decor-01.svg);
-}
-
 .staff-item__img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
     z-index: 1;
+    display: block;
     width: 100%;
     border-radius: inherit;
 }
