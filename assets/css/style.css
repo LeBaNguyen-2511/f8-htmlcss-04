@@ -150,8 +150,8 @@ body {
 }
 
 .btn__primary {
-    color: #fff;
-    background: var(--primary-color);
+    color: #fff !important;
+    background: var(--primary-color) !important;
 }
 
 .container {
@@ -823,4 +823,141 @@ h6 {
 .staff__cta {
     min-width: 193px;
     margin: 48px auto 0;
+}
+
+/* ------------------------ Purchase ------------------------ */
+.purchase {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+
+.purchase__top {
+    text-align: center;
+}
+
+.purchase__desc {
+    width: 709px;
+    margin: 24px auto 0;
+}
+
+.purchase__switch-wrap {
+    margin-top: 38px;
+}
+
+.purchase__switch-label {
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 276px;
+    height: 56px;
+    padding: 0 40px;
+    border: 1px solid rgb(255 91 46 / 60%);
+    border-radius: 999px;
+}
+
+.purchase__switch-label::before {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    display: inline-block;
+    width: 131px;
+    border-radius: inherit;
+    background: var(--primary-color);
+}
+
+.purchase__switch:checked + .purchase__switch-label::before {
+    left: -1px;
+    width: 145px;
+}
+
+.purchase__switch-content {
+    position: relative;
+    z-index: 1;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.6rem;
+    user-select: none;
+}
+
+.purchase__switch:not(:checked)
+    + .purchase__switch-label
+    .purchase__switch-content--right,
+.purchase__switch:checked
+    + .purchase__switch-label
+    .purchase__switch-content--left {
+    color: #fff;
+}
+
+.purchase__switch-save {
+    position: absolute;
+    bottom: 29px;
+    right: -111px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.purchase__list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 44px;
+    width: 994px;
+    margin: 56px auto 0;
+}
+
+.purchase-item {
+    padding: 30px 28px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.purcharse-item__package {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.purchase-item__heading {
+    margin-top: 8px;
+    color: #3f4065;
+    font-family: var(--sub-font);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.purchase-item__price {
+    margin-top: 24px;
+    color: var(--secondary-color);
+    font-family: var(--sub-font);
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+.purchase-item__btn {
+    --height: 44px;
+
+    width: 100%;
+    margin-top: 22px;
+    background: transparent;
+}
+
+.purchase-item__btn:hover {
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.purchase-item__list {
+    margin-top: 24px;
+}
+
+.purchase-item__item {
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+}
+
+.purchase-item__item::before {
+    content: url(../img/purchase/purchase-check.svg);
+    margin-right: 14px;
 }
