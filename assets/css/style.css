@@ -1007,18 +1007,16 @@ h6 {
     color: #fff;
     border-color: var(--primary-color);
     background: var(--primary-color);
-    box-shadow: 0px 5px 27px 0px #FF5B2E4D;
+    box-shadow: 0px 5px 27px 0px #ff5b2e4d;
 }
 
 .review__list {
-    flex-grow: 1;
-    width: 974px;
-} 
+    overflow: hidden;
+}
 
 .review__list-content {
     display: flex;
     column-gap: 44px;
-    overflow: hidden;
 }
 
 .review-item {
@@ -1040,7 +1038,7 @@ h6 {
     width: 100%;
     height: 350px;
     border-radius: 137px;
-    background: #FFDA54;
+    background: #ffda54;
 }
 
 .review-item__img {
@@ -1083,14 +1081,14 @@ h6 {
     background: #000;
 }
 
-.review__list-dots {
+.review__dots {
     display: flex;
     justify-content: center;
     column-gap: 8px;
     margin-top: 56px;
 }
 
-.review__list-dot {
+.review__dot {
     width: 8px;
     height: 8px;
     border: 1px solid var(--primary-color);
@@ -1098,10 +1096,9 @@ h6 {
     cursor: pointer;
 }
 
-.review__list-dot--active {
+.review__dot--active {
     width: 24px;
     height: 8px;
     border-radius: 999px;
     background: var(--primary-color);
-
 }
