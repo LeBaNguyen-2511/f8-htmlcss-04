@@ -913,7 +913,11 @@ h6 {
     background: #fff;
 }
 
-.purcharse-item__package {
+.purchase-item:nth-child(2) {
+    box-shadow: 0px 20px 44px 0px #c36c160f;
+}
+
+.purchase-item__package {
     color: var(--primary-color);
     font-size: 1.2rem;
 }
@@ -940,6 +944,7 @@ h6 {
     width: 100%;
     margin-top: 22px;
     background: transparent;
+    cursor: pointer;
 }
 
 .purchase-item__btn:hover {
@@ -952,6 +957,7 @@ h6 {
 }
 
 .purchase-item__item {
+    display: flex;
     margin-top: 18px;
     color: #656689;
     font-size: 1.4rem;
@@ -960,4 +966,13 @@ h6 {
 .purchase-item__item::before {
     content: url(../img/purchase/purchase-check.svg);
     margin-right: 14px;
+}
+
+.purchase-item:is(:nth-child(1), :nth-child(2))
+    .purchase-item__item:is(
+        :nth-child(5),
+        :nth-child(6),
+        :nth-child(7)
+    )::before {
+    opacity: 0.4;
 }
