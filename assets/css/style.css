@@ -220,6 +220,7 @@ h6 {
 
 .header__signup:hover {
     color: #fff;
+    border-color: var(--secondary-color);
     background: var(--secondary-color);
 }
 
@@ -1139,11 +1140,11 @@ h6 {
 }
 
 .blog-item:nth-child(2) .blog-item__media {
-    background: #FF997E;
+    background: #ff997e;
 }
 
 .blog-item:nth-child(3) .blog-item__media {
-    background: #5BD6E2;
+    background: #5bd6e2;
 }
 
 .blog-item__time {
@@ -1178,4 +1179,92 @@ h6 {
     color: #656689;
     font-size: 1.4rem;
     line-height: 1.71;
+}
+
+/* ------------------------ Footer ------------------------ */
+.footer {
+    margin-top: 131px;
+    background: #fff6ed;
+}
+
+.footer__left {
+    padding: 114px 0 148px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 268px;
+    height: 46px;
+    margin-top: 35px;
+    border: 1px solid #ff5b2e40;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 60%);;
+}
+
+.search-form__input {
+    width: 100%;
+    height: inherit;
+    padding: 0 16px;
+    border: none;
+    border-radius: inherit;
+    outline: none;
+    background: transparent;
+}
+
+.search-form__input::placeholder {
+    color: #656689;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.17;
+    opacity: 0.8;
+}
+
+.search-form__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    margin-right: -1px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background: #ff5b2e;
+    cursor: pointer;
+    box-shadow: 0px 15px 28px -7px #ff5b2e4d;
+}
+
+.social {
+    margin-top: 68px;
+}
+
+.social-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.11;
+}
+
+.social-list {
+    display: flex;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 16px 28px -10px #d3843554;
+}
+
+.social-item:hover {
+    opacity: 0.8;
 }
